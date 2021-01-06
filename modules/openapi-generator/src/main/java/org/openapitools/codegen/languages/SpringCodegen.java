@@ -828,16 +828,16 @@ public class SpringCodegen extends AbstractJavaCodegen
                 model.imports.add("JsonValue");
             }
         } else { // enum class
-            //Needed imports for Jackson's JsonCreator
-            if (additionalProperties.containsKey("jackson")) {
-                model.imports.add("JsonCreator");
-            }
-        }
+			//Needed imports for Jackson's JsonCreator
+			if (additionalProperties.containsKey("jackson")) {
+				model.imports.add("JsonCreator");
+			}
+		}
 
         // Add imports for java.util.Arrays
-		if (property.isBinary || property.isByteArray) {
-			model.imports.add("Arrays");
-		}
+        if (property.isBinary || property.isByteArray) {
+            model.imports.add("Arrays");
+        }
     }
 
     @Override
